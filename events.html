@@ -1,0 +1,195 @@
+<html>
+<head>
+    <title>AboutUs</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+     <link href="css/bootstrap.min.css" type="text/css" />
+    <link href="css/bootstrap.css.map" type="text/css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    
+    #myCarousel .nav a small
+{
+    display: block;
+}
+#myCarousel .nav
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.nav-pills>li[data-slide-to="0"].active a { background-color: #16a085; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
+    </style>
+    
+    <script type="text/javascript">
+    $(document).ready( function() {
+   
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+    </script>
+</head>
+<body>
+    <nav class="navbar navhead">
+        <div class="container-fluid"  >
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                <label class="label label-success"> GivinGHanD </label>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="">About<span class="sr-only">(current)</span> </a></li>
+                <li class=""><a href="">Services</a></li>
+                <li class=""><a href="">Gallery</a></li>
+                <li class=""><a href="">Events</a></li>
+                <li class=""><a href="">Team</a></li>
+                <li class=""><a href="">Donate</a></li>
+                <li class=""><a href="">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid" style="text-align:center;">
+    <div class="pag-header">
+        <h2><u></u></h2>
+    </div>
+        
+    <div>
+        
+        
+        <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+         <ul class="nav nav-pills nav-justified">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About</a></li>
+            <li data-target="#myCarousel" data-slide-to="1"><a href="#">Recent Events</a></li>
+            <li data-target="#myCarousel" data-slide-to="2"><a href="#">Upcoming</a></li>
+            <li data-target="#myCarousel" data-slide-to="3"><a href="#">Old</a></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="item active">
+               <h3>
+                        Headline</h3>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/bg_img.jpg" height="100px" width="200px" >
+                        </div>
+                        <div class="col-md-9">
+                        <p>
+                            A wonderful event with a successfull test in the colors of the world    
+                        </p>
+                        </div>
+                    </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <h3>
+                        Headline</h3>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/bg_img.jpg" height="100px" width="200px" >
+                        </div>
+                        <div class="col-md-9">
+                        <p>
+                            A wonderful event with a successfull test in the colors of the world    
+                        </p>
+                        </div>
+                    </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <h3>
+                        Headline</h3>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/bg_img.jpg" height="100px" width="200px" >
+                        </div>
+                        <div class="col-md-9">
+                        <p>
+                            A wonderful event with a successfull test in the colors of the world    
+                        </p>
+                        </div>
+                    </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <h3>
+                        Headline</h3>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/bg_img.jpg" height="100px" width="200px" >
+                        </div>
+                        <div class="col-md-9">
+                        <p>
+                            A wonderful event with a successfull test in the colors of the world    
+                        </p>
+                        </div>
+                    </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+        
+        
+    </div>    
+    
+    </div>
+    <div class="well footer">
+        <div class="row">
+            <div class="col-md-4">
+            <h5>Great Love for Humanity</h5>
+            <ol class="breadcrumb navbottom">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="active">Gallery</li>
+            </ol>    
+            </div>
+            <div class="col-md-4">
+                <h5>Contact us On</h5>
+                <br />
+                2263462687
+                <br>
+                kishan.krishna.patel44@gmail.com
+            </div>
+            <div class="col-md-4">
+            <h5>Copyright</h5>
+            <br />
+                Theme Reserved @Kishankumar Patel
+            </div>
+        </div>
+        </div>
+</body>
+</html>
